@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cushman & Wakefield Core | Dubai Commercial Real Estate</title>
+
+    <!-- Google Fonts: Inter (matching cushwake.ae) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E4002B',
+                        secondary: '#686B6B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header id="main-header"
+        class="fixed w-full top-0 z-50 bg-white transition-all duration-300 border-b border-gray-200">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <img src="logo.png" alt="Cushman & Wakefield" class="h-10">
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+971543227639"
+                    class="hidden md:flex items-center gap-2 text-secondary hover:text-primary transition-colors font-medium">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    +971 54 322 7639
+                </a>
+                <a href="#contact"
+                    class="bg-primary hover:bg-red-700 text-white px-6 py-2.5 rounded-md font-semibold transition-colors shadow-lg shadow-red-500/30">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="hero.jpg" alt="Cushman & Wakefield Dubai" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-white text-center md:text-left">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Better Never Settles
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">
+                    Find Commercial Properties for sale or rent in UAE
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact"
+                        class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-all transform hover:-translate-y-1 shadow-xl shadow-red-600/40 text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Expertise</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div
+                        class="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i data-lucide="building-2"
+                            class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Office Leasing</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Premium office spaces in prime locations like DIFC, Downtown, and Business Bay tailored to your
+                        corporate needs.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div
+                        class="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i data-lucide="warehouse"
+                            class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Industrial & Warehousing</h3>
+                    <p class="text-secondary leading-relaxed">
+                        State-of-the-art logistics facilities, warehouses, and industrial land across Dubai's key free
+                        zones.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div
+                        class="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i data-lucide="bar-chart-3"
+                            class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Asset Valuation</h3>
+                    <p class="text-secondary leading-relaxed">
+                        RICS-accredited valuation services providing accurate market insights for all property types.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Properties</h2>
+                    <div class="w-20 h-1 bg-primary"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div
+                    class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="property1.jpg" alt="Commercial Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Premium Office
+                            Space</h3>
+                        <p class="text-secondary text-sm mb-4 flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Dubai, UAE
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div
+                    class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="property2.jpg" alt="Commercial Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Retail Space</h3>
+                        <p class="text-secondary text-sm mb-4 flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Dubai, UAE
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div
+                    class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="property3.jpg" alt="Commercial Property"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Mixed-Use
+                            Development</h3>
+                        <p class="text-secondary text-sm mb-4 flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Dubai, UAE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Core?</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dubai Market Experts</h3>
+                    <p class="text-gray-400">Over 15 years of local experience navigating the complexities of the Dubai
+                        real estate market.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="globe" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Global Reach</h3>
+                    <p class="text-gray-400">Part of the Cushman & Wakefield global network, connecting you to
+                        opportunities worldwide.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data-Driven Insights</h3>
+                    <p class="text-gray-400">We leverage proprietary data and analytics to make informed decisions for
+                        your assets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-5/12 bg-primary p-10 text-white flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-black/10 rounded-full blur-3xl"></div>
+
+                    <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+                    <p class="mb-8 text-red-100">Ready to find your perfect space? Fill out the form and our team will
+                        contact you shortly.</p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            <span>+971 54 322 7639</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span>mujtaba.sajawal@cushwake.ae</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span>Emaar Square, Dubai</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-7/12 p-10">
+                    <form id="lead-form" action="https://formspree.io/f/mrbvbkbz" method="POST" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" name="name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                            <input type="text" name="company"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                placeholder="Your Company Ltd.">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                    placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" name="phone" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                    placeholder="+971 50 123 4567">
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-black hover:bg-gray-800 text-white font-bold py-3 rounded-lg transition-colors shadow-lg">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="logo.png" alt="Cushman & Wakefield" class="h-8 mb-3 brightness-0 invert">
+                    <p class="text-sm">© 2025 Cushman & Wakefield Core. All rights reserved.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/company/cushwakecore/" target="_blank"
+                        class="hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" target="_blank" class="hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" target="_blank" class="hover:text-white transition-colors">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/971543227639" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
