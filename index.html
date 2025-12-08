@@ -46,7 +46,7 @@
         <div class="container mx-auto px-6 h-24 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="#" class="flex items-center">
-                    <img src="logo-horizontal.png" alt="Cushman & Wakefield" class="h-12 md:h-14">
+                    <img src="logo-horizontal.png" alt="Cushman & Wakefield" class="h-8 md:h-14 transition-all">
                 </a>
             </div>
             <div class="flex items-center gap-4">
@@ -55,8 +55,8 @@
                     <i data-lucide="phone" class="w-5 h-5"></i>
                     +971 56 771 5860
                 </a>
-                <a href="#contact"
-                    class="bg-primary hover:bg-red-700 text-white px-4 py-2 md:px-8 md:py-3 rounded-md font-semibold transition-all shadow-lg text-sm md:text-lg whitespace-nowrap">
+                <a href="#contact" <a href="#contact"
+                    class="bg-primary hover:bg-red-700 text-white px-3 py-2 md:px-8 md:py-3 rounded-md font-bold transition-all shadow-lg text-xs md:text-lg whitespace-nowrap uppercase tracking-wide">
                     Arrange Viewing
                 </a>
             </div>
@@ -64,7 +64,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20">
+    <section class="relative min-h-dvh h-auto flex flex-col justify-center pt-32 pb-24 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="hero.jpg" alt="Plaza Boutique 10, Business Bay" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50"></div>
@@ -137,7 +137,7 @@
                                 value="https://mujtaba695-afk.github.io/newlandingpage/thank-you.html">
                             <input type="hidden" name="_captcha" value="false">
                             <button type="submit"
-                                class="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-all shadow-lg transform hover:-translate-y-1">
+                                class="w-full bg-primary hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-all shadow-lg transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed">
                                 Submit Inquiry
                             </button>
                         </form>
@@ -490,7 +490,7 @@
                                 value="https://mujtaba695-afk.github.io/newlandingpage/thank-you.html">
                             <input type="hidden" name="_captcha" value="false">
                             <button type="submit"
-                                class="w-full bg-secondary hover:bg-gray-900 text-white font-bold py-5 rounded-lg transition-all shadow-lg text-lg transform hover:-translate-y-1">
+                                class="w-full bg-secondary hover:bg-gray-900 text-white font-bold py-5 rounded-lg transition-all shadow-lg text-lg transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed">
                                 Submit Inquiry
                             </button>
                         </form>

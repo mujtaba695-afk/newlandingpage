@@ -132,5 +132,64 @@ window.addEventListener('pageshow', function (event) {
 
 // Also clear on clean load to be sure
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('form').forEach(form => form.reset());
+    // Force reset on load with a small delay to override browser autofill
+    setTimeout(() => {
+        document.querySelectorAll('form').forEach(form => {
+            form.reset();
+            form.querySelectorAll('input').forEach(input => input.setAttribute('autocomplete', 'off'));
+        });
+    }, 100);
+
+    // 1. Enforce digits-only for phone numbers (multiple events for mobile support)
+    document.querySelectorAll('input[name="phone"]').forEach(input => {
+        ['input', 'keydown', 'keyup', 'change', 'paste'].forEach(eventType => {
+            input.addEventListener(eventType, function (e) {
+                // Allow navigation keys (backspace, arrows, delete, tab)
+                if (['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(e.key)) return;
+
+                // Replace non-digits immediately
+                this.value = this.value.replace(/\D/g, '');
+            });
+        });
+    });
+
+    // 2. Prevent Double Submission
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            const btn = this.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.disabled = true;
+                btn.textContent = 'Sending...';
+                btn.style.opacity = '0.7';
+                btn.style.cursor = 'wait';
+
+                // Re-enable after 10 seconds just in case (network timeout)
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Submit Inquiry';
+                    btn.style.opacity = '1';
+                    btn.style.cursor = 'pointer';
+                }, 10000);
+            }
+        });
+    });
+});
+
+// 3. Clear forms on page show (handles back/forward cache)
+window.addEventListener('pageshow', function (event) {
+    if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        // Force reset again on back navigation
+        setTimeout(() => {
+            document.querySelectorAll('form').forEach(form => {
+                form.reset();
+                const btn = form.querySelector('button[type="submit"]');
+                if (btn) {
+                    btn.disabled = false;
+                    btn.textContent = 'Submit Inquiry';
+                    btn.style.opacity = '1';
+                    btn.style.cursor = 'pointer';
+                }
+            });
+        }, 50);
+    }
 });
