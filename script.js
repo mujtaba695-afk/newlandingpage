@@ -93,14 +93,40 @@ carousel.parentElement.addEventListener('mouseleave', () => {
 
 // Form is handled by Formspree - no custom JavaScript needed
 
-// Clear forms on page load (handles back/forward cache)
+// 1. Enforce digits-only for phone numbers
+document.querySelectorAll('input[name="phone"]').forEach(input => {
+    input.addEventListener('input', function (e) {
+        this.value = this.value.replace(/\D/g, '');
+    });
+});
+
+// 2. Prevent Double Submission
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+        }
+    });
+});
+
+// 3. Clear forms on page load (handles back/forward cache)
 window.addEventListener('pageshow', function (event) {
     var historyTraversal = event.persisted ||
         (typeof window.performance != 'undefined' &&
             window.performance.navigation.type === 2);
     if (historyTraversal) {
         // Handle page restore.
-        document.querySelectorAll('form').forEach(form => form.reset());
+        document.querySelectorAll('form').forEach(form => {
+            form.reset();
+            // Re-enable button if it was disabled
+            const btn = form.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = 'Submit Inquiry';
+            }
+        });
     }
 });
 
