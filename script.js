@@ -92,3 +92,19 @@ carousel.parentElement.addEventListener('mouseleave', () => {
 });
 
 // Form is handled by Formspree - no custom JavaScript needed
+
+// Clear forms on page load (handles back/forward cache)
+window.addEventListener('pageshow', function (event) {
+    var historyTraversal = event.persisted ||
+        (typeof window.performance != 'undefined' &&
+            window.performance.navigation.type === 2);
+    if (historyTraversal) {
+        // Handle page restore.
+        document.querySelectorAll('form').forEach(form => form.reset());
+    }
+});
+
+// Also clear on clean load to be sure
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('form').forEach(form => form.reset());
+});

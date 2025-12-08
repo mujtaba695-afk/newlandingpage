@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Cushman & Wakefield Core</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E4002B',
+                        secondary: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-10 md:p-16 rounded-2xl shadow-2xl text-center max-w-2xl mx-4 border border-gray-100">
+        <div class="mb-8 flex justify-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                <i data-lucide="check" class="w-10 h-10 text-green-600"></i>
+            </div>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Thank You!</h1>
+        <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+            Thank you for contacting us. Our expert will contact you shortly.
+        </p>
+
+        <a href="index.html"
+            class="inline-flex items-center gap-2 bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:-translate-y-1 shadow-lg text-lg">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
