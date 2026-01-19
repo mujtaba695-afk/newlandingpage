@@ -176,6 +176,12 @@ nav {
     opacity: 0.8;
 }
 
+.nav-links .header-phone {
+    color: var(--cw-red) !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
 .nav-links a:hover {
     opacity: 1;
     color: var(--cw-red);
