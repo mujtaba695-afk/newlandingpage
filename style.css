@@ -63,6 +63,16 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Form Validation Styles */
+input:focus:invalid {
+    border-color: var(--cw-red);
+    box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.1);
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #2ecc71;
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -437,6 +447,95 @@ nav {
     font-size: 0.9rem;
     color: var(--cw-grey);
     line-height: 1.6;
+}
+
+/* Gallery Carousel Styles */
+.gallery-carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-premium);
+}
+
+.gallery-carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--cw-black);
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav button:hover {
+    background: var(--cw-red);
+    color: white;
+}
+
+.nav-prev {
+    left: 20px;
+}
+
+.nav-next {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
 }
 
 /* Trust Badges Styling */

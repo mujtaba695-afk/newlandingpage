@@ -101,57 +101,35 @@
         <section id="offerings" class="section-offerings">
             <div class="container">
                 <div class="section-header reveal-fade">
-                    <span class="gold-text">Key Features</span>
-                    <!-- ✏️ CUSTOMIZE: Update section title and description -->
+                    <span class="gold-text">Gallery</span>
                     <h2 class="section-title">Superior Commercial Space</h2>
-                    <p class="section-subtitle">A standalone villa format supporting privacy, branding and operational
-                        control.</p>
+                    <p class="section-subtitle">Experience the standalone villa format offering privacy, branding, and
+                        total operational control.</p>
                 </div>
 
-                <div class="offerings-grid">
-                    <!-- Offering Card 1 -->
-                    <div class="offering-card reveal-card">
-                        <div class="card-image">
-                            <!-- ✏️ CUSTOMIZE: Replace with offering 1 image -->
-                            <img src="images/offering-1.jpg" alt="Boutique Plaza 10 Exterior" loading="lazy">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-badge">Commercial Villa</span>
-                            <h3>Prime Visibility</h3>
-                            <p>Control your brand presence with a standalone building in Dubai's core commercial
-                                district.</p>
-                            <ul class="card-features">
-                                <!-- ✏️ CUSTOMIZE: Update features -->
-                                <li><i class="fas fa-check"></i> Exceptional Branding</li>
-                                <li><i class="fas fa-check"></i> Direct Podium Access</li>
-                                <li><i class="fas fa-check"></i> No Shared Lobbies</li>
-                            </ul>
-                            <button class="btn btn-primary open-calc-form" data-cta="Brochure Download"
-                                data-download="true" style="margin-top: 10px; width: 100%;"><i
-                                    class="fas fa-download"></i> Download Brochure</button>
+                <!-- 📸 NEW: 7-Image Gallery Carousel -->
+                <div class="gallery-carousel-container reveal-fade">
+                    <div class="gallery-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/carousel-1.jpg"
+                                    alt="Boutique Plaza 10 Exterior"></div>
+                            <div class="carousel-slide"><img src="images/carousel-2.jpg" alt="Executive Entrance"></div>
+                            <div class="carousel-slide"><img src="images/carousel-3.jpg" alt="Standalone Detail"></div>
+                            <div class="carousel-slide"><img src="images/carousel-4.jpg" alt="Premium Meeting Space">
+                            </div>
+                            <div class="carousel-slide"><img src="images/carousel-5.jpg"
+                                    alt="Boutique Office Interiors"></div>
+                            <div class="carousel-slide"><img src="images/carousel-6.jpg" alt="Modern Workplace"></div>
+                            <div class="carousel-slide"><img src="images/carousel-7.jpg" alt="Direct Access View"></div>
                         </div>
                     </div>
-
-                    <!-- Offering Card 2 -->
-                    <div class="offering-card reveal-card delay-1">
-                        <div class="card-image">
-                            <!-- ✏️ CUSTOMIZE: Replace with offering 2 image -->
-                            <img src="images/offering-2.jpg" alt="Business Bay Core" loading="lazy">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-badge">Prime Location</span>
-                            <h3>Business Bay Core</h3>
-                            <p>Situated at the heart of Dubai's commercial hub with unprecedented access.</p>
-                            <ul class="card-features">
-                                <!-- ✏️ CUSTOMIZE: Update features -->
-                                <li><i class="fas fa-check"></i> Boutique Layout</li>
-                                <li><i class="fas fa-check"></i> High Visibility</li>
-                            </ul>
-                            <button class="btn btn-primary open-calc-form" data-cta="Brochure Download"
-                                data-download="true" style="margin-top: 10px; width: 100%;"><i
-                                    class="fas fa-download"></i> Download Brochure</button>
-                        </div>
+                    <div class="carousel-nav">
+                        <button class="nav-prev" aria-label="Previous Slide" title="Previous Slide"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <button class="nav-next" aria-label="Next Slide" title="Next Slide"><i
+                                class="fas fa-chevron-right"></i></button>
                     </div>
+                    <div class="carousel-dots"></div>
                 </div>
             </div>
         </section>
@@ -275,7 +253,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Mobile</label>
-                                    <input type="tel" placeholder="+971" required>
+                                    <input type="tel" placeholder="+9715..." required pattern="^(\+971|0)?5[0-9]{8}$"
+                                        title="Please enter a valid UAE mobile number (e.g., +971501234567 or 0501234567).">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -350,7 +329,8 @@
                 </div>
                 <div class="form-group">
                     <label>Mobile</label>
-                    <input type="tel" placeholder="+971" required>
+                    <input type="tel" placeholder="+9715..." required pattern="^(\+971|0)?5[0-9]{8}$"
+                        title="Please enter a valid UAE mobile number (e.g., +971501234567 or 0501234567).">
                 </div>
                 <div class="form-group">
                     <label>Email</label>

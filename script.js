@@ -119,24 +119,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let shouldDownloadBrochure = false;
-
     openBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const source = btn.dataset.cta || 'Inquiry';
-            const isDownload = btn.dataset.download === 'true';
-
             if (ctaSourceInput) ctaSourceInput.value = source;
-
-            // Track if this is a brochure download request
-            shouldDownloadBrochure = isDownload;
-
             toggleForm(true);
         });
     });
 
     if (closeBtn) closeBtn.addEventListener('click', () => toggleForm(false));
     if (overlay) overlay.addEventListener('click', () => toggleForm(false));
+
+    // --- 📸 Gallery Carousel Logic ---
+    const carousel = () => {
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+        const nextButton = document.querySelector('.nav-next');
+        const prevButton = document.querySelector('.nav-prev');
+        const dotsNav = document.querySelector('.carousel-dots');
+
+        if (!track || slides.length === 0) return;
+
+        let currentIndex = 0;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => moveToSlide(index));
+            dotsNav.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsNav.querySelectorAll('.dot'));
+
+        const updateDots = (index) => {
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        };
+
+        const moveToSlide = (index) => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            currentIndex = index;
+            updateDots(index);
+        };
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            moveToSlide(currentIndex);
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            moveToSlide(currentIndex);
+        });
+
+        // Auto play
+        let autoPlay = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            moveToSlide(currentIndex);
+        }, 5000);
+
+        // Pause auto play on interaction
+        const resetAutoPlay = () => {
+            clearInterval(autoPlay);
+            autoPlay = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                moveToSlide(currentIndex);
+            }, 5000);
+        };
+
+        [nextButton, prevButton, dotsNav].forEach(el => {
+            el.addEventListener('click', resetAutoPlay);
+        });
+    };
+
+    carousel();
 
     // --- Magnetic Button Effect ---
     const magneticBtns = document.querySelectorAll('.magnetic-btn');
@@ -228,6 +286,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const userEmail = emailInput ? emailInput.value : null;
             const userPhone = phoneInput ? phoneInput.value : null;
 
+            // --- Custom Phone Validation (UAE Format) ---
+            if (phoneInput) {
+                const uaePhoneRegex = /^(\+971|0)?5[0-9]{8}$/;
+                if (!uaePhoneRegex.test(userPhone)) {
+                    phoneInput.setCustomValidity("Please enter a valid UAE mobile number (e.g., +971501234567 or 0501234567).");
+                    phoneInput.reportValidity();
+                    return;
+                } else {
+                    phoneInput.setCustomValidity("");
+                }
+            }
+
             // Check if user has already submitted
             const submittedData = localStorage.getItem('waslTowerSubmission');
             if (submittedData) {
@@ -269,16 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> Inquiry Received';
                 submitBtn.style.backgroundColor = '#2ecc71'; // Success Green
 
-                // Trigger brochure download if requested
-                if (shouldDownloadBrochure) {
-                    const link = document.createElement('a');
-                    link.href = 'Wasl Images/WT BROCH (24cm)_V14 (1)_0.pdf';
-                    link.download = 'Wasl_Tower_Brochure.pdf';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    shouldDownloadBrochure = false; // Reset flag
-                }
+                // Success State
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Inquiry Received';
+                submitBtn.style.backgroundColor = '#2ecc71'; // Success Green
 
                 setTimeout(() => {
                     // Close form and keep button disabled permanently
