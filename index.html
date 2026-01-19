@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✏️ CUSTOMIZE: Update page title and meta description -->
+    <title>{{PROPERTY_NAME}} | Grade A Offices for Rent on {{LOCATION}} | Cushman & Wakefield Core</title>
+    <meta name="description"
+        content="Enquire about premium Grade A office spaces in {{PROPERTY_NAME}}, Dubai's newest architectural landmark. Featuring world-class sustainability and modern amenities.">
+    <meta name="keywords"
+        content="{{PROPERTY_NAME}} Dubai, office space {{LOCATION}}, commercial property for rent Dubai, luxury offices Dubai">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Global Dark Overlay for Smooth Animations -->
+    <div class="page-overlay"></div>
+
+    <header class="header-main">
+        <nav class="container">
+            <div class="logo">
+                <!-- ✏️ CUSTOMIZE: Update logo path if needed -->
+                <img src="logo-core.jpg" alt="Cushman & Wakefield Core" loading="eager">
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-animate">Overview</a>
+                <a href="#offerings" class="nav-animate">Offerings</a>
+                <a href="#amenities" class="nav-animate">Amenities</a>
+                <div class="header-contact">
+                    <a href="tel:+971567121822" class="header-phone"><i class="fas fa-phone"></i> +971 56 712 1822</a>
+                </div>
+                <a href="#contact" class="btn btn-primary magnetic-btn open-calc-form">Enquire Now</a>
+            </div>
+            <div class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Premium Hero Section -->
+        <section class="hero-premium">
+            <!-- ✏️ CUSTOMIZE: Replace hero image -->
+            <div class="hero-bg" style="background-image: url('{{HERO_IMAGE_PATH}}');"></div>
+            <div class="hero-vignette"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge reveal-fade">
+                        <!-- ✏️ CUSTOMIZE: Update badge text -->
+                        <span class="gold-text">{{BADGE_TEXT}}</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <!-- ✏️ CUSTOMIZE: Update main headline -->
+                        <span class="reveal-text">{{HERO_HEADLINE_LINE1}}</span>
+                        <span class="reveal-text delay-1">{{HERO_HEADLINE_LINE2}}</span>
+                    </h1>
+                    <p class="hero-subtitle reveal-fade delay-2">
+                        <!-- ✏️ CUSTOMIZE: Update hero description -->
+                        {{HERO_DESCRIPTION}}
+                    </p>
+                    <div class="hero-cta-group reveal-fade delay-3">
+                        <button class="btn btn-primary btn-gold-shine open-calc-form" data-cta="Hero Primary">Enquire
+                            Now</button>
+                        <a href="#offerings" class="btn btn-secondary">Explore Offerings</a>
+                    </div>
+                </div>
+
+                <div class="hero-trust-indicators reveal-fade delay-4">
+                    <!-- ✏️ CUSTOMIZE: Update trust indicators -->
+                    <div class="trust-item">
+                        <span class="trust-number">{{TRUST_NUMBER_1}}</span>
+                        <span class="trust-label">{{TRUST_LABEL_1}}</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">{{TRUST_NUMBER_2}}</span>
+                        <span class="trust-label">{{TRUST_LABEL_2}}</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">{{TRUST_NUMBER_3}}</span>
+                        <span class="trust-label">{{TRUST_LABEL_3}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offerings: Premium Business Ecosystem -->
+        <section id="offerings" class="section-offerings">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <span class="gold-text">Key Offerings</span>
+                    <!-- ✏️ CUSTOMIZE: Update section title and description -->
+                    <h2 class="section-title">{{OFFERINGS_TITLE}}</h2>
+                    <p class="section-subtitle">{{OFFERINGS_SUBTITLE}}</p>
+                </div>
+
+                <div class="offerings-grid">
+                    <!-- Offering Card 1 -->
+                    <div class="offering-card reveal-card">
+                        <div class="card-image">
+                            <!-- ✏️ CUSTOMIZE: Replace with offering 1 image -->
+                            <img src="{{OFFERING_1_IMAGE}}" alt="{{OFFERING_1_IMAGE_ALT}}" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge">{{OFFERING_1_BADGE}}</span>
+                            <h3>{{OFFERING_1_TITLE}}</h3>
+                            <p>{{OFFERING_1_DESCRIPTION}}</p>
+                            <ul class="card-features">
+                                <!-- ✏️ CUSTOMIZE: Update features -->
+                                <li><i class="fas fa-check"></i> {{OFFERING_1_FEATURE_1}}</li>
+                                <li><i class="fas fa-check"></i> {{OFFERING_1_FEATURE_2}}</li>
+                                <li><i class="fas fa-check"></i> {{OFFERING_1_FEATURE_3}}</li>
+                            </ul>
+                            <button class="btn btn-primary open-calc-form" data-cta="Brochure Download"
+                                data-download="true" style="margin-top: 10px; width: 100%;"><i
+                                    class="fas fa-download"></i> Download Brochure</button>
+                        </div>
+                    </div>
+
+                    <!-- Offering Card 2 -->
+                    <div class="offering-card reveal-card delay-1">
+                        <div class="card-image">
+                            <!-- ✏️ CUSTOMIZE: Replace with offering 2 image -->
+                            <img src="{{OFFERING_2_IMAGE}}" alt="{{OFFERING_2_IMAGE_ALT}}" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge">{{OFFERING_2_BADGE}}</span>
+                            <h3>{{OFFERING_2_TITLE}}</h3>
+                            <p>{{OFFERING_2_DESCRIPTION}}</p>
+                            <ul class="card-features">
+                                <!-- ✏️ CUSTOMIZE: Update features -->
+                                <li><i class="fas fa-check"></i> {{OFFERING_2_FEATURE_1}}</li>
+                                <li><i class="fas fa-check"></i> {{OFFERING_2_FEATURE_2}}</li>
+                            </ul>
+                            <button class="btn btn-primary open-calc-form" data-cta="Brochure Download"
+                                data-download="true" style="margin-top: 10px; width: 100%;"><i
+                                    class="fas fa-download"></i> Download Brochure</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Grid: Technical Excellence -->
+        <section class="section-specs">
+            <div class="container">
+                <div class="specs-grid">
+                    <!-- ✏️ CUSTOMIZE: Update 4 specifications -->
+                    <div class="spec-item reveal-fade">
+                        <i class="fas fa-{{SPEC_1_ICON}}"></i>
+                        <h4>{{SPEC_1_TITLE}}</h4>
+                        <p>{{SPEC_1_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-1">
+                        <i class="fas fa-{{SPEC_2_ICON}}"></i>
+                        <h4>{{SPEC_2_TITLE}}</h4>
+                        <p>{{SPEC_2_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-2">
+                        <i class="fas fa-{{SPEC_3_ICON}}"></i>
+                        <h4>{{SPEC_3_TITLE}}</h4>
+                        <p>{{SPEC_3_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-3">
+                        <i class="fas fa-{{SPEC_4_ICON}}"></i>
+                        <h4>{{SPEC_4_TITLE}}</h4>
+                        <p>{{SPEC_4_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges Section -->
+        <section class="section-badges">
+            <div class="container badge-flex">
+                <!-- ✏️ CUSTOMIZE: Update certifications/badges -->
+                <div class="badge-item reveal-fade">
+                    <i class="fas fa-certificate fa-2x" style="color: var(--cw-red); margin-bottom: 10px;"></i>
+                    <span>{{BADGE_1}}</span>
+                </div>
+                <div class="badge-item reveal-fade delay-1">
+                    <i class="fas fa-leaf fa-2x" style="color: var(--cw-red); margin-bottom: 10px;"></i>
+                    <span>{{BADGE_2}}</span>
+                </div>
+                <div class="badge-item reveal-fade delay-2">
+                    <i class="fas fa-shield-alt fa-2x" style="color: var(--cw-red); margin-bottom: 10px;"></i>
+                    <span>{{BADGE_3}}</span>
+                </div>
+                <div class="badge-item reveal-fade delay-3">
+                    <i class="fas fa-check-circle fa-2x" style="color: var(--cw-red); margin-bottom: 10px;"></i>
+                    <span>{{BADGE_4}}</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floor Plans Section -->
+        <section id="floor-plans" class="section-floor-plans">
+            <div class="container">
+                <div class="reveal-fade" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                    <span class="gold-text">{{FLOOR_SECTION_LABEL}}</span>
+                    <h2>{{PROPERTY_NAME}}</h2>
+                    <p>{{FLOOR_DESCRIPTION}}</p>
+                    <div class="floor-stats" style="justify-content: center; margin: 40px auto;">
+                        <!-- ✏️ CUSTOMIZE: Update statistics (add or remove as needed) -->
+                        <div class="stat">
+                            <strong>{{STAT_1_NUMBER}}</strong>
+                            <span>{{STAT_1_LABEL}}</span>
+                        </div>
+                        <div class="stat">
+                            <strong>{{STAT_2_NUMBER}}</strong>
+                            <span>{{STAT_2_LABEL}}</span>
+                        </div>
+                        <div class="stat">
+                            <strong>{{STAT_3_NUMBER}}</strong>
+                            <span>{{STAT_3_LABEL}}</span>
+                        </div>
+                        <div class="stat">
+                            <strong>{{STAT_4_NUMBER}}</strong>
+                            <span>{{STAT_4_LABEL}}</span>
+                        </div>
+                        <div class="stat">
+                            <strong>{{STAT_5_NUMBER}}</strong>
+                            <span>{{STAT_5_LABEL}}</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary open-calc-form" data-cta="Floor Plan Section">Enquire
+                        Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer's Vision Section (OPTIONAL - customize or remove) -->
+        <section class="section-specs" style="background-color: var(--cw-white);">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <span class="gold-text">{{VISION_LABEL}}</span>
+                    <h2 class="section-title">{{VISION_TITLE}}</h2>
+                    <p class="section-subtitle">{{VISION_SUBTITLE}}</p>
+                </div>
+                <div class="specs-grid">
+                    <!-- ✏️ CUSTOMIZE: Update developer stats (or remove this section) -->
+                    <div class="spec-item reveal-fade">
+                        <i class="fas fa-building"></i>
+                        <h4>{{VISION_STAT_1_NUMBER}}</h4>
+                        <p>{{VISION_STAT_1_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-1">
+                        <i class="fas fa-city"></i>
+                        <h4>{{VISION_STAT_2_NUMBER}}</h4>
+                        <p>{{VISION_STAT_2_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-2">
+                        <i class="fas fa-hotel"></i>
+                        <h4>{{VISION_STAT_3_NUMBER}}</h4>
+                        <p>{{VISION_STAT_3_DESCRIPTION}}</p>
+                    </div>
+                    <div class="spec-item reveal-fade delay-3">
+                        <i class="fas fa-utensils"></i>
+                        <h4>{{VISION_STAT_4_NUMBER}}</h4>
+                        <p>{{VISION_STAT_4_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Gallery -->
+        <section id="amenities" class="section-gallery">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <span class="gold-text">Lifestyle</span>
+                    <h2 class="section-title">{{AMENITIES_TITLE}}</h2>
+                </div>
+                <div class="gallery-grid">
+                    <!-- ✏️ CUSTOMIZE: Replace with 3 amenity images -->
+                    <div class="gallery-item reveal-fade">
+                        <img src="{{AMENITY_1_IMAGE}}" alt="{{AMENITY_1_ALT}}" loading="lazy">
+                        <div class="gallery-overlay"><span>{{AMENITY_1_LABEL}}</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade delay-1">
+                        <img src="{{AMENITY_2_IMAGE}}" alt="{{AMENITY_2_ALT}}" loading="lazy">
+                        <div class="gallery-overlay"><span>{{AMENITY_2_LABEL}}</span></div>
+                    </div>
+                    <div class="gallery-item reveal-fade delay-2">
+                        <img src="{{AMENITY_3_IMAGE}}" alt="{{AMENITY_3_ALT}}" loading="lazy">
+                        <div class="gallery-overlay"><span>{{AMENITY_3_LABEL}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Lead Generation: Premium Inquiries -->
+        <section id="contact" class="section-contact">
+            <div class="container">
+                <div class="contact-card reveal-card">
+                    <div class="contact-info">
+                        <span class="gold-text">{{CONTACT_LABEL}}</span>
+                        <h2>{{CONTACT_TITLE}}</h2>
+                        <p>{{CONTACT_DESCRIPTION}}</p>
+                        <div class="contact-meta">
+                            <!-- ✏️ CUSTOMIZE: Update contact information -->
+                            <div class="meta-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+971 4 245 2100</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@cushwake.ae</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="premium-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile</label>
+                                    <input type="tel" placeholder="+971" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <input type="text" placeholder="Acme Corp" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Corporate Email</label>
+                                    <input type="email" placeholder="john@company.ae" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea placeholder="How can we help? (Optional)" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-gold-shine">Enquire Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo-core.jpg" alt="Cushman & Wakefield Core" class="footer-logo" loading="lazy">
+                    <p>Cushman & Wakefield Core Commercial Offerings.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <a href="#offerings">Offerings</a>
+                        <a href="#amenities">Amenities</a>
+                        <a href="#connectivity">Connectivity</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cushman & Wakefield Core. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lead Form Slide-over (Refined) -->
+    <div class="slide-over-overlay" id="calc-overlay"></div>
+    <div class="slide-over" id="calc-slide-over">
+        <div class="slide-over-content">
+            <button class="close-slide"><i class="fas fa-times"></i></button>
+            <div class="slide-over-header">
+                <span class="gold-text">Enquiry</span>
+                <h2>Request Details</h2>
+                <p>Receive the exclusive commercial dossier and priority availability list.</p>
+            </div>
+            <form id="calcLeadForm" class="premium-form">
+                <input type="hidden" id="form-source-cta" name="cta_source" value="General">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="tel" placeholder="+971" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="email@company.ae" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell us more about your requirements..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enquire Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sticky Conversion Hub -->
+    <div class="sticky-hub">
+        <div class="container sticky-flex">
+            <div class="sticky-links">
+                <!-- ✏️ CUSTOMIZE: Update WhatsApp and phone numbers -->
+                <a href="https://wa.me/971567121822" target="_blank" class="whatsapp-link"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+971567121822"><i class="fas fa-phone"></i> Instant Call</a>
+            </div>
+            <button class="btn btn-primary open-calc-form" data-cta="Sticky Hub">Enquire Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
